@@ -2,7 +2,7 @@ import ollama
 import requests
 
 # RunPod'un external port'unu kullan
-RUNPOD_HOST = "http://157.157.221.29:19760"
+RUNPOD_HOST = "http://157.157.221.29:19687"
 
 # Direkt HTTP API testi
 def test_connection():
@@ -27,7 +27,7 @@ except Exception as e:
 
 # Chat testi
 try:
-    response = client.chat(model='gemma3:12b', messages=[
+    response = client.chat(model='llama3.1:8b', messages=[
         {'role': 'user', 'content': 'Hello! How are you?'}
     ])
     print("Response:", response['message']['content'])
